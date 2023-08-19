@@ -63,7 +63,8 @@ class Random_Tests(unittest.TestCase):
         # Test choice.
         items = [1, 2, 4, 8, 16, 32, 64]
         for i in range(10):
-            self.assertTrue(secrets.choice(items) in items)
+            item = secrets.choice(items)
+            self.assertTrue(item in items)
 
     def test_randbelow(self):
         # Test randbelow.
